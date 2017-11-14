@@ -1,0 +1,29 @@
+footer {
+  height: 200px;
+
+  .contact-details {
+    padding: 20px 0;
+  }
+
+  .contact-details li {
+    width: 100%;
+    padding-bottom: 10px;
+    
+    @include media-query( $tablet ) {
+      float: left;
+      width: 30%;
+    }
+  }
+  
+  @include media-query( $tablet ) {
+
+    .content-details li:last-child {
+      width: 40%;
+      
+      &:after {
+        clear: both;
+        content: '';
+      }
+    }
+  }
+}

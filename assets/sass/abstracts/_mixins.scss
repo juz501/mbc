@@ -1,0 +1,5 @@
+@mixin media-query($breakpoint, $order: min, $axis: width) {
+  @media screen and (#{$order}-#{$axis}: #{$breakpoint}) {
+    @content;
+  }
+}

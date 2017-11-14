@@ -1,0 +1,19 @@
+.drawbox {
+  position: relative;
+  padding-bottom: 20px;
+  
+  &:after {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    border-bottom: 1px solid $emphasis_color;
+    content: ' ';
+    transition: width 0.5s ease-out; // Width expands first
+    transition-delay: 1s;
+  }
+}
+
+.loaded .drawbox:after {
+  width: 100%;
+}
