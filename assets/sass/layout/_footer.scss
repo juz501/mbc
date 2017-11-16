@@ -1,5 +1,5 @@
 footer {
-  height: 200px;
+  height: 60px;
 
   .contact-details {
     padding: 20px 0;
@@ -11,14 +11,21 @@ footer {
     
     @include media-query( $tablet ) {
       float: left;
-      width: 30%;
+      width: 28%;
+      text-align: center;
     }
   }
   
   @include media-query( $tablet ) {
 
-    .content-details li:last-child {
-      width: 40%;
+    .contact-details li:first-child {
+      width: 28%;
+      text-align: left;
+    }
+
+    .contact-details li:last-child {
+      width: 44%;
+      text-align: right;
       
       &:after {
         clear: both;

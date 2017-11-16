@@ -1,6 +1,8 @@
 <?php
 get_header(); 
-
-get_template_part( 'content-templates/content', 'loop' ); 
-
+?><div class="drawbox"><?php
+  ?><section class="wrap"><?php
+    get_template_part( 'content-templates/content', 'loop' ); 
+  ?></section><?php
+?></div><?php 
 get_footer();

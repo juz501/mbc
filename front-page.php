@@ -8,9 +8,9 @@ get_header();
         endif; 
       ?>><h2><?php the_field('banner_heading') ; ?></h2><a class="button" href="<?php the_field( 'banner_button_link' ); ?>"><?php
         the_field( 'banner_button_text' ); ?></a></div><?php
-      ?><section class="wrap">
+      ?><section class="wrap service-times">
         <a class="anchor" id="service-times"></a><?php
-          get_template_part( 'content-templates/content', 'frontpage' ); 
+          the_field( 'service_time_section' );
       ?></section><?php
   ?></div><?php
 get_footer();

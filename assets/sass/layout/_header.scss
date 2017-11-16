@@ -4,9 +4,11 @@ header {
   width: 100%;
   background-color: $bg-color;
 
-  h1 {
+  h1,
+  .logo-span {
     display: inline-block;
     max-width: 80px;
+    margin-left: -7px;
     font-size: 0.8em;
     text-align: right;
     vertical-align: middle;
