@@ -7,7 +7,7 @@
     bottom: 0;
     width: 0;
     height: 1px;
-    border-bottom: 1px solid $emphasis_color;
+    border-bottom: 1px solid $primary_color;
     content: ' ';
     transition: width 0.5s ease-out; // Width expands first
     transition-delay: 1s;

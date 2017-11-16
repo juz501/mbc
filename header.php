@@ -16,10 +16,13 @@
         <div id="page" class="site">
             <header id="masthead" class="site-header" role="banner">
                 <div class="wrap">
-                    <?php 
+                  <div class="logo">
+                    <a href="<?php echo get_site_url(); ?>"><?php 
                       $logo = get_field( 'website_logo', 'options' );
-                      $logo_white = get_field( 'website_white_logo', 'options' );
-                      ?><img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" width="<?php echo $logo['width']; ?>" height="<?php echo $logo['height']; ?>" />
+		                  if ( $logo ) :
+                        echo file_get_contents( $logo['url'] );
+                      endif; ?><h1>mooroolbark <strong>baptist</strong> church&nbsp;&nbsp;</h1></a>
+                    </div>
                 </div>
             </header><!-- #masthead -->
             <div class="site-content">

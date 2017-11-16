@@ -4,9 +4,33 @@
     background-color: transparent;
     transition: all 0.25s ease-in;
 
-    &.scroll {
-      background-color: $bg_color;
+    h1 {
+      color: $white;
+      transition: all 0.25s ease-in;
     }
+
+    .logo path {
+      fill: $white;
+      transition: all 0.25s ease-in;
+    }
+
+    &.scroll {
+      background-color: $bg-color;
+
+      h1 {
+        color: $primary-color;
+      }
+
+      .logo path {
+        fill: $primary-color;
+      }
+    }
+
+    
+  }
+
+  header .logo path {
+    fill: $white;
   }
 
   .site-content {
@@ -43,14 +67,9 @@
   .banner h2 {
     margin-bottom: 20px;
     color: $white;
-    font-size: 40px;
     @include media-query( $tablet ) {
       margin-bottom: 40px;
     }
-  }
-
-  .site-content h2 {
-    font-size: 30px;
   }
 
   .site-content ul {

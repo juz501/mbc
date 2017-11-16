@@ -2,5 +2,26 @@ header {
   position: fixed;
   z-index: 99;
   width: 100%;
-  background-color: $bg_color;
+  background-color: $bg-color;
+
+  h1 {
+    display: inline-block;
+    max-width: 80px;
+    font-size: 0.8em;
+    text-align: right;
+    vertical-align: middle;
+    
+    strong {
+      display: inline-block;
+      margin-right: -10px;
+    }
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .logo path {
+    fill: $primary-color;
+  }
 }
