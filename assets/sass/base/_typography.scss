@@ -11,7 +11,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: $text-color;
   font-family: $heading-font;
   font-weight: 400;
@@ -24,15 +24,15 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 1.5em;
 }
 
 a {
-  color: $primary-color;
+  color: $text-color;
   text-decoration: none;
 
   &:hover {
-    color: $text-color;
+    color: $emphasis-color;
     text-decoration: underline;
   }
 }

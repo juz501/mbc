@@ -4,6 +4,11 @@ header {
   width: 100%;
   background-color: $bg-color;
 
+  .wrap {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   h1,
   .logo-span {
     display: inline-block;

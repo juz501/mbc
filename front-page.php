@@ -5,8 +5,8 @@
     $banner = get_field( 'banner_image' ); 
   ?>
   <div class="banner"
-    <?php 
-      if ( ! $use_video && $banner ) :
+    <?php
+      if ( ! $use_video && $banner && array_key_exists( 'url', $banner ) ) :
           ?> style="background-image: url('<?php echo $banner['url']; ?>');"<?php
       endif; 
     ?>
@@ -16,9 +16,6 @@
       <a class="button" href="<?php the_field( 'banner_button_link' ); ?>"><?php the_field( 'banner_button_text' ); ?></a>
     </div>
   </div>
-  <section class="wrap service-times">
-    <a class="anchor" id="service-times"></a>
-    <?php the_field( 'service_time_section' ); ?>
-  </section>
+  <?php get_template_part( 'content-templates/content', 'services' ); ?>
 </div>
 <?php get_footer();

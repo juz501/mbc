@@ -65,26 +65,23 @@
   .banner .cta {
     max-height: 100%;
     padding: 106px 0;
+    background-color: rgba(0, 0, 0, 0.5);
 
     @include media-query( $tablet ) {
       padding: 142px 0;
     }
 
     @include media-query( $desktop ) {
-      padding: 265px 0;
+      padding: 269px 0;
     }
   }
 
   .banner h2 {
     margin-bottom: 20px;
     color: $white;
-    font-size: 1.5em;
     @include media-query( $tablet ) {
       margin-bottom: 30px;
-      font-size: 2.5em;
-    }
-    @include media-query( $desktop ) {
-      margin-bottom: 40px;
+      font-size: 2.25em;
     }
   }
 
@@ -116,5 +113,73 @@
 
   .service-times {
     text-align: center;
+
+    @include media-query( $tablet ) {
+      text-align: left;
+    }
+
+    .service-times-heading {
+      margin-bottom: 20px;
+    }
+
+    .service-time {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      height: 200px;
+      padding: 30px;
+      margin: 10px auto;
+      border-left: 10px solid $primary-color;
+      text-align: left;
+
+      @include media-query( $tablet ) {
+        width: 50%;
+        margin: 30px 0;
+      }
+
+      @include media-query( $desktop ) {
+        width: 33%;
+      }
+
+      .day {
+        font-size: 1.5em;
+        text-transform: capitalize;
+      }
+
+      .hour,
+      .minutes {
+        font-size: 2em;
+      }
+
+      .time-divider,
+      .ampm {
+        font-size: 1.5em;
+        text-transform: lowercase;
+      }
+
+      .date {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+      }
+
+      .day-of-month {
+        color: $primary-color;
+        font-size: 1.5em;
+      }
+
+      .month {
+        color: $primary-color;
+        font-size: 1em;
+      }
+
+      .description {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        font-style: italic;
+      }
+    }
   }
 }
