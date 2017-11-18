@@ -113,11 +113,22 @@
     }
   }
 
-  .service-times {
+  .service-times-wrap {
     text-align: center;
+  }
+
+  .service-times {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
 
     @include media-query( $tablet ) {
-      text-align: left;
+      width: 800px;
+    }
+
+    @include media-query( $desktop ) {
+      width: auto;
     }
 
     .service-times-heading {
@@ -137,7 +148,8 @@
 
       @include media-query( $tablet ) {
         width: 50%;
-        margin: 30px 0;
+        margin-top: 30px;
+        margin-bottom: 30px;
       }
 
       @include media-query( $desktop ) {
@@ -180,13 +192,9 @@
         position: absolute;
         right: 30px;
         bottom: 30px;
-        max-width: 180px;
+        max-width: 75%;
         font-style: italic;
         text-align: right;
-
-        @include media-query( $tablet ) {
-          max-width: 250px;
-        }
       }
     }
   }
