@@ -2,7 +2,17 @@ header {
   position: fixed;
   z-index: 99;
   width: 100%;
+  border-bottom: 1px solid $primary-color;
   background-color: $bg-color;
+
+  &:after {
+    position: absolute;
+    z-index: -1;
+    bottom: 1px;
+    width: 100%;
+    box-shadow: 0 4px 5px 0.22px $black;
+    content: '';
+  }
 
   .wrap {
     padding-top: 0;

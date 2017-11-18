@@ -1,24 +1,26 @@
 {
   "name": "mbc_theme",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "Mooroolbark Baptist Church Theme",
   "homepage": "http://mbc.org.au",
   "author": "Julian Chan <julianc@gmail.com>",
   "private": true,
   "license": "GPL-3.0",
   "scripts": {
-    "sass": "node-sass assets/sass/style.scss dist/style.css",
-    "sasswatch": "node-sass assets/sass/style.scss dist/style.css --watch",
-    "lint": "yarn lint:js && yarn lint:scss",
-    "lint:js": "eslint \"**/*.js\"",
-    "lint:scss": "stylelint \"**/*.scss\""
+    "build": "gulp",
+    "watch": "gulp watch"
   },
   "dependencies": {
     "@chromatix/eslint-config-chromatix": "^0.0.13",
-    "@chromatix/stylelint-config-chromatix": "^0.1.8",
-    "eslint": "^4.11.0",
-    "node-sass": "^4.6.1"
+    "@chromatix/stylelint-config-chromatix": "^0.1.8"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-stylelint": "^5.0.0"
+  },
   "main": "index.php"
 }
