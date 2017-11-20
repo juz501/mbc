@@ -15,10 +15,11 @@
               else :
                 ?><h3 class="day"><?php echo get_sub_field( 'day' )['label']; ?></h3><?php
               endif;
-              ?><span class="hour"><?php echo get_sub_field( 'hour' ); ?></span><?php
+              $service_time = get_sub_field( 'time' );
+              ?><span class="hour"><?php echo date( 'g', $service_time ); ?></span><?php
               ?><span class="time-divider">:</span><?php
-              ?><span class="minutes"><?php echo str_pad( get_sub_field( 'minutes' ), 2, '0' ); ?></span><?php
-              ?><span class="ampm"><?php echo get_sub_field( 'am_pm' ); ?></span><?php
+              ?><span class="minutes"><?php echo date( 'i', $service_time ); ?></span><?php
+              ?><span class="ampm"><?php echo date( 'a', $service_time ); ?></span><?php
               
               if ( $select_date && $service_date ) :
                 ?><div class="date">
