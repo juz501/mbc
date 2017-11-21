@@ -16,7 +16,6 @@ h6 {
   font-family: $heading-font;
   font-weight: 400;
   font-style: italic;
-  text-transform: lowercase;
 }
 
 h1 {
@@ -40,6 +39,20 @@ a {
 p {
   margin-bottom: 20px;
   line-height: 1.5;
+}
+
+ul {
+  margin-bottom: 20px;
+}
+
+li {
+  line-height: 1.5;
+  
+  &:before {
+    margin-right: 15px;
+    color: $primary-color;
+    content: '•';
+  }
 }
 
 strong,

@@ -1,0 +1,35 @@
+.two-columns-wrap {
+  
+  .heading {
+    margin-bottom: 20px;
+    color: $primary-color;
+    text-align: center;
+  }
+
+  .two-columns {
+    display: block;
+
+    @include media-query( $tablet ) {
+      display: flex;
+      align-items: left;
+      justify-content: left;
+    }
+  
+    .column {
+      width: 100%;
+
+      @include media-query( $tablet ) {
+        flex: 1;
+        width: 50%;
+
+        &:first-child {
+          padding-right: 2%;
+        }
+
+        &:last-child {
+          padding-left: 2%;
+        }
+      }
+    }
+  }
+}

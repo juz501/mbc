@@ -43,8 +43,6 @@
     width: 100%;
     height: 300px;
 
-    margin-bottom: 20px;
-
     background-color: $black;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -78,124 +76,21 @@
     }
   }
 
+  .banner .button {
+    background-color: $secondary-color;
+
+    &:hover {
+      color: $primary-color;
+      background-color: $white;
+    }
+  }
+
   .banner h2 {
     margin-bottom: 20px;
     color: $white;
     @include media-query( $tablet ) {
       margin-bottom: 30px;
       font-size: 2.25em;
-    }
-  }
-
-  .site-content ul {
-    padding: 10px 0;
-    @include media-query( $tablet ) {
-      padding: 10px 0;
-    }
-    @include media-query( $desktop ) {
-      padding: 20px 0;
-    }
-  }
-
-  .site-content li {
-    
-    padding-bottom: 10px;
-    
-  }
-
-  .site-content p {
-    @include media-query( $tablet ) {
-      padding: 0 50px;
-    }
-
-    @include media-query( $desktop ) {
-      padding: 0 80px;
-    }
-  }
-
-  .service-times-wrap {
-    text-align: center;
-  }
-
-  .service-times {
-    width: 400px;
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: left;
-
-    @include media-query( $tablet ) {
-      width: 800px;
-    }
-
-    @include media-query( $desktop ) {
-      width: auto;
-    }
-
-    .service-times-heading {
-      margin-bottom: 20px;
-    }
-
-    .service-time {
-      display: inline-block;
-      position: relative;
-      width: 100%;
-      max-width: 400px;
-      height: 200px;
-      padding: 30px;
-      margin: 10px auto;
-      border-left: 10px solid $primary-color;
-      text-align: left;
-
-      @include media-query( $tablet ) {
-        width: 50%;
-        margin-top: 30px;
-        margin-bottom: 30px;
-      }
-
-      @include media-query( $desktop ) {
-        width: 33%;
-      }
-
-      .day {
-        font-size: 1.5em;
-        text-transform: capitalize;
-      }
-
-      .hour,
-      .minutes {
-        font-size: 2em;
-      }
-
-      .time-divider,
-      .ampm {
-        font-size: 1.5em;
-        text-transform: lowercase;
-      }
-
-      .date {
-        position: absolute;
-        top: 30px;
-        right: 30px;
-      }
-
-      .day-of-month {
-        color: $primary-color;
-        font-size: 1.5em;
-      }
-
-      .month {
-        color: $primary-color;
-        font-size: 1em;
-      }
-
-      .description {
-        position: absolute;
-        right: 30px;
-        bottom: 30px;
-        max-width: 75%;
-        font-style: italic;
-        text-align: right;
-      }
     }
   }
 }

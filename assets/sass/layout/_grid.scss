@@ -1,5 +1,9 @@
 section {
-  padding: 10px 0;
+  margin: 30px 0;
+
+  &.no-bottom-margin {
+    margin-bottom: 0;
+  }
 }
 
 .wrap {
