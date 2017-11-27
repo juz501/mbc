@@ -10,7 +10,15 @@
   ?>
 >
   <div class="cta">
-    <h2><?php the_field('banner_heading') ; ?></h2>
-    <a class="button" href="<?php the_field( 'banner_button_link' ); ?>"><?php the_field( 'banner_button_text' ); ?></a>
+    <?php
+      $banner_heading = get_field( 'banner_heading' );
+      $no_heading = false;
+      if ( $banner_heading ) : 
+    ?><h2><?php echo $banner_heading; ?></h2><?php 
+      else:
+        $no_heading = true;
+      endif; 
+    ?>
+    <a class="button<?php if ( $no_heading ) : echo ' no-heading'; endif; ?>" href="<?php the_field( 'banner_button_link' ); ?>"><?php the_field( 'banner_button_text' ); ?></a>
   </div>
 </div>

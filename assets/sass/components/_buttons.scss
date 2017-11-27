@@ -5,13 +5,13 @@
   margin: 0 auto;
   border-radius: 5px;
   color: $white;
-  background-color: $primary-color;
+  background-color: $primary-dark-color;
   font-weight: 600;
   text-transform: uppercase;
 
   &:hover {
     color: $white;
-    background-color: $secondary-color;
+    background-color: $secondary-dark-color;
     text-decoration: none;
   }
 }

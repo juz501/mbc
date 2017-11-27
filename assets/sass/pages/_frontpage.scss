@@ -17,7 +17,7 @@
 
     &.scroll {
       border-bottom: 1px solid $primary-color;
-      background-color: $bg-color;
+      background-color: rgba($bg-color, 1);
 
       h1 {
         color: $primary-color;
@@ -63,34 +63,47 @@
   }
 
   .banner .cta {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     max-height: 100%;
-    padding: 106px 0;
+    // padding: 106px 0;
     background-color: rgba(0, 0, 0, 0.5);
 
     @include media-query( $tablet ) {
-      padding: 142px 0;
+      // padding: 142px 0;
     }
 
     @include media-query( $desktop ) {
-      padding: 269px 0;
-    }
-  }
-
-  .banner .button {
-    background-color: $secondary-color;
-
-    &:hover {
-      color: $primary-color;
-      background-color: $white;
+      min-height: 650px;
+      // padding: 269px 0;
     }
   }
 
   .banner h2 {
+    display: inline-block;
+    margin-top: auto;
     margin-bottom: 20px;
     color: $white;
+    
     @include media-query( $tablet ) {
       margin-bottom: 30px;
       font-size: 2.25em;
+    }
+  }
+
+  .banner .button {
+    margin-top: 0;
+    margin-bottom: 70px;
+    background-color: $secondary-dark-color;
+
+    &.no-heading {
+      margin-top: auto;
+    }
+
+    &:hover {
+      color: $primary-dark-color;
+      background-color: $white;
     }
   }
 }
