@@ -1,9 +1,9 @@
-.service-times-wrap {
+.events-wrap {
   text-align: center;
 }
 
-.service-times {
-  width: 400px;
+.events {
+  width: 300px;
   max-width: 100%;
   margin: 0 auto;
   text-align: left;
@@ -16,33 +16,38 @@
     width: auto;
   }
 
-  .service-times-heading {
+  .events-heading {
     margin-bottom: 20px;
   }
 
-  .service-time {
+  .event {
     display: inline-block;
     position: relative;
     width: 100%;
     max-width: 400px;
-    height: 200px;
+    height: auto;
     padding: 30px;
     margin: 0 auto 30px;
+
     border-left: 5px solid $primary-color;
     text-align: left;
+    vertical-align: top;
+    
+
 
     &:last-child {
       margin-bottom: 0;
     }
 
     @include media-query( $tablet ) {
-      width: 33%;
+      width: 25%;
       margin-bottom: 0;
     }
 
     .day {
       color: $secondary-color;
       font-size: 1.5em;
+      line-height: 1.5;
       text-transform: capitalize;
     }
 
@@ -73,13 +78,10 @@
       font-size: 1em;
     }
 
-    .description {
-      position: absolute;
-      right: 30px;
-      bottom: 30px;
-      max-width: 75%;
+    .event-heading {
+      margin-top: 20px;
+      color: $secondary-color;
       font-style: italic;
-      text-align: right;
     }
   }
 }

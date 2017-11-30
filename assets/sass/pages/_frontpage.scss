@@ -39,52 +39,68 @@
     padding-top: 0;
   }
 
-  .banner {
+  .top-section {
+    position: relative;
     width: 100%;
     height: 300px;
-
     background-color: $black;
-    background-position: center bottom;
+
+    @include media-query( $tablet ) {
+      height: 600px;
+    }
+
+    @include media-query( $desktop ) {
+      height: 700px;
+    }
+
+  }
+
+  .banner {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    
+    width: 100%;
+    max-width: $large-desktop;
+    height: 100%;
+    
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     
     text-align: center;
+    transform: translate3d(-50%, 0, 0);
 
-    @include media-query( $tablet ) {
-      height: 400px;
-      background-position: center center;
-    }
-
-    @include media-query( $desktop ) {
-      height: 650px;
-      background-attachment: fixed;
-      background-position: center center;
-    }
   }
 
-  .banner .cta {
+  .cta {
+    
     display: flex;
+    
     flex-direction: column;
+    position: relative;
+    z-index: 2;
     width: 100%;
-    max-height: 100%;
-    // padding: 106px 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+
+    background-color: rgba($black, 0.8);
 
     @include media-query( $tablet ) {
-      // padding: 142px 0;
-    }
-
-    @include media-query( $desktop ) {
-      min-height: 650px;
-      // padding: 269px 0;
+      background-color: rgba($black, 0.4);
     }
   }
 
-  .banner h2 {
+  .cta h2 {
+    
     display: inline-block;
+    position: relative;
+    z-index: 1;
     margin-top: auto;
     margin-bottom: 20px;
+    
     color: $white;
+    text-align: center;
     
     @include media-query( $tablet ) {
       margin-bottom: 30px;
@@ -92,18 +108,26 @@
     }
   }
 
-  .banner .button {
+  .cta .cta-buttons {
+    position: relative;
+    z-index: 1;
     margin-top: 0;
     margin-bottom: 70px;
-    background-color: $secondary-dark-color;
-
+    text-align: center;
+    
     &.no-heading {
       margin-top: auto;
     }
 
-    &:hover {
-      color: $primary-dark-color;
-      background-color: $white;
+    .button {
+      margin: 0 20px;
+      background-color: $secondary-dark-color;
+      
+
+      &:hover {
+        color: $primary-dark-color;
+        background-color: $white;
+      }
     }
   }
 }

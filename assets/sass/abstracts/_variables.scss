@@ -1,7 +1,8 @@
 $content-width: 1170px;
 
-$desktop: 1024px;
-$tablet: 640px;
+$large-desktop: 1401px;
+$desktop: 1025px;
+$tablet: 641px;
 
 
 $primary-color: #75381c; // for white text
@@ -11,10 +12,12 @@ $secondary-color: #e75d24;
 $secondary-light-color: #ff8e52;
 $secondary-dark-color: #ae2b00;  // for white text
 $white: #fff;
-$black: #333;
+$black: #222;
 
 $text-color: $black;
 $emphasis-color: $secondary-color;
 $bg-color: $white;
 $base-font: 'Poppins', sans-serif;
 $heading-font: $base-font;
+
+$transition-duration: 250ms;

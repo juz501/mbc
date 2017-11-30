@@ -1,5 +1,6 @@
-<section class="no-bottom-margin">
+<section class="no-margin-bottom">
   <div class="directions-wrap">
+    <span class="address"> <?php echo get_field( 'address', 'options' ); ?></span>
     <a class="button" target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=<?php 
       echo urlencode( get_field( 'address', 'options' ) ); 
       ?>"><?php 

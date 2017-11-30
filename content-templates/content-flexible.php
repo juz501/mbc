@@ -3,6 +3,9 @@
 if ( have_rows( 'page_content' ) ) :
   while ( have_rows( 'page_content' ) ) : the_row();
     switch ( get_row_layout() ) :
+    case 'photo_boxes':
+      get_template_part( 'content-templates/content', 'photo_boxes' );
+      break;
     case 'services' :
       get_template_part( 'content-templates/content', 'service_times' );
       break;

@@ -1,0 +1,93 @@
+.photo-boxes {
+
+  width: 100%;
+  height: 300px;
+
+  @include media-query( $tablet ) {
+    height: 250px;
+
+    &:after {
+      clear: both;
+      content: ' ';
+    }
+  }
+
+  .photo-link {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    
+    text-decoration: none;
+    
+    .shader {
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+
+      width: 100%;
+      height: 100px;
+      
+      background-color: rgba($black, 0.5);
+      transition-duration: $transition-duration;
+      @include media-query( $tablet ) {
+        height: 100%;
+      }
+    }
+    
+    &:hover {
+
+      
+      
+      .shader {
+        background-color: transparent;
+      }
+    }
+
+    @include media-query( $tablet ) {
+      float: left;
+      width: 33.33%;
+      height: 250px;
+    }
+    
+  }
+    
+  .photo {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 200px;
+    height: 100px;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition-duration: $transition-duration;
+    @include media-query( $tablet ) {
+      height: 100%;
+    }
+  }
+
+  .photo-link:hover .photo {
+    transform: scale(1.1);
+    transform-origin: center center;
+  }
+
+  .photo-label {
+    position: relative;
+    z-index: 2;
+    color: $white;
+    text-align: center;
+
+    &.dark {
+      color: $black;
+    }
+  }
+}
