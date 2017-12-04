@@ -42,8 +42,6 @@
     
     &:hover {
 
-      
-      
       .shader {
         background-color: transparent;
       }
@@ -84,6 +82,7 @@
     position: relative;
     z-index: 2;
     color: $white;
+    font-style: italic;
     text-align: center;
 
     &.dark {

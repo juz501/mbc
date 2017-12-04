@@ -3,7 +3,11 @@
     <div class="service-times-wrap">
       <div class="service-times">
         <a class="anchor" id="<?php the_sub_field('services_anchor'); ?>"></a>
-        <?php 
+        <?php
+          $services_heading = get_sub_field('services_heading'); 
+          if ( $services_heading ) :
+            ?><h2 class="service-times-heading"><?php echo $services_heading; ?></h2><?php
+          endif;
           if ( have_rows( 'service_time_list' ) ) :
             while ( have_rows( 'service_time_list') ) : 
               the_row();
@@ -27,7 +31,8 @@
                     <span class="month"><?php echo date( 'M', $service_date ); ?></span>
                   </div><?php
                 endif;
-                ?><h3 class="description"><?php echo get_sub_field( 'description' ); ?></h3><?php
+                ?><span class="heading"><?php echo get_sub_field('heading');?></span><?php
+                ?><div class="description"><?php echo get_sub_field( 'description' ); ?></div><?php
               ?></div><?php
             endwhile;
           endif;

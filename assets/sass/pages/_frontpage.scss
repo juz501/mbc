@@ -7,6 +7,7 @@
 
     h1 {
       color: $white;
+      font-weight: 400;
       transition: all 0.25s ease-in;
     }
 
@@ -98,9 +99,13 @@
     z-index: 1;
     margin-top: auto;
     margin-bottom: 20px;
-    
+
     color: $white;
+    font-weight: 400;
+    font-style: italic;
     text-align: center;
+    
+
     
     @include media-query( $tablet ) {
       margin-bottom: 30px;
@@ -112,17 +117,24 @@
     position: relative;
     z-index: 1;
     margin-top: 0;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
     text-align: center;
+
+    @include media-query($tablet) {
+      margin-bottom: 70px;
+    }
     
     &.no-heading {
       margin-top: auto;
     }
 
     .button {
-      margin: 0 20px;
+      margin: 0 20px 10px;
       background-color: $secondary-dark-color;
-      
+
+      @include media-query($tablet) {
+        margin-bottom: 0;
+      }
 
       &:hover {
         color: $primary-dark-color;

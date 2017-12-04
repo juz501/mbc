@@ -18,6 +18,7 @@
 
   .events-heading {
     margin-bottom: 20px;
+    font-size: 2.2em;
   }
 
   .event {
@@ -40,8 +41,12 @@
     }
 
     @include media-query( $tablet ) {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+
+    @include media-query( $desktop ) {
       width: 25%;
-      margin-bottom: 0;
     }
 
     .day {
@@ -79,7 +84,9 @@
     }
 
     .event-heading {
-      margin-top: 20px;
+      display: block;
+      margin-top: 30px;
+      margin-bottom: 10px;
       color: $secondary-color;
       font-style: italic;
     }

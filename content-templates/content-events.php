@@ -4,8 +4,11 @@
       <div class="events">
         <a class="anchor" id="<?php the_sub_field('events_anchor'); ?>"></a>
         <?php 
+          $events_heading = get_sub_field('events_heading');
+          if ( $events_heading ) :
+            ?><h2 class="events-heading"><?php echo $events_heading; ?></h2><?php
+          endif;
           if ( have_rows( 'event_list' ) ) :
-            ?><h2 class="events-heading"><?php echo get_sub_field('events_heading'); ?></h2><?php
             while ( have_rows( 'event_list') ) : 
               the_row();
               ?><div class="event"><?php
@@ -19,7 +22,7 @@
                   <span class="day-of-month"><?php echo date( 'd', $event_date_time ); ?></span>
                   <span class="month"><?php echo date( 'M', $event_date_time ); ?></span>
                 </div><?php
-                ?><h3 class="event-heading"><?php echo get_sub_field( 'event_heading' ); ?></h3><?php
+                ?><span class="event-heading"><?php echo get_sub_field( 'event_heading' ); ?></span><?php
                 ?><div class="description"><?php echo get_sub_field( 'event_description' ); ?></div><?php
               ?></div><?php
             endwhile;

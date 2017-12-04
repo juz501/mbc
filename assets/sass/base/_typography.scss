@@ -14,8 +14,7 @@ h6 {
   margin-bottom: 10px;
   color: $text-color;
   font-family: $heading-font;
-  font-weight: 400;
-  font-style: italic;
+  font-weight: 700;
   line-height: 1.5;
 }
 
@@ -45,16 +44,15 @@ p {
 
 ul {
   margin-bottom: 20px;
+  
+  list-style-position: outside;
+  list-style-type: disc;
 }
 
 li {
+  margin-bottom: 5px;
+  margin-left: 20px;
   line-height: 1.5;
-  
-  &:before {
-    margin-right: 15px;
-    color: $primary-color;
-    content: '•';
-  }
 }
 
 strong,
