@@ -79,6 +79,7 @@
       right: 10px;
       bottom: 65px;
       max-width: 75%;
+      line-height: 1.5;
       text-align: right;
       @include media-query($tablet) {
         right: 30px;
