@@ -9,8 +9,16 @@
     display: inline-block;
     padding: 0 15px;
     margin-bottom: 10px;
-    color: $white;
     text-align: right;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      
+      &:hover {
+        color: $secondary-light-color;
+      }
+    }
   }
 
   .button {
