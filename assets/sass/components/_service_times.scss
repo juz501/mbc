@@ -9,11 +9,27 @@
   text-align: left;
 
   @include media-query( $tablet ) {
-    width: 800px;
+
+    &.col-2,
+    &.col-3 {
+      width: 800px;
+    }
+
   }
 
   @include media-query( $desktop ) {
-    width: auto;
+
+    &.col-1 {
+      width: 400px;
+    }
+
+    &.col-2 {
+      width: 800px;
+    }
+
+    &.col-3 {
+      width: 1130px;
+    }
   }
 
   .service-times-heading {
@@ -25,7 +41,7 @@
     display: inline-block;
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 374px;
     height: 200px;
     padding: 30px;
     margin: 0 auto 30px;
@@ -36,8 +52,7 @@
       margin-bottom: 0;
     }
 
-    @include media-query( $tablet ) {
-      width: 50%;
+    @include media-query( $desktop ) {
       margin-bottom: 0;
     }
 
