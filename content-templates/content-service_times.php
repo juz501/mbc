@@ -27,7 +27,15 @@
                 ?><span class="time-divider">:</span><?php
                 ?><span class="minutes"><?php echo date( 'i', $service_time ); ?></span><?php
                 ?><span class="ampm"><?php echo date( 'a', $service_time ); ?></span><?php
-                
+                $has_second_time = get_sub_field( 'has_second_time' );
+                if ( $has_second_time ) :
+                  $second_service_time = get_sub_field( 'second_time' );
+                  ?> &amp; <?
+                  ?><span class="hour"><?php echo date( 'g', $second_service_time ); ?></span><?php
+                  ?><span class="time-divider">:</span><?php
+                  ?><span class="minutes"><?php echo date( 'i', $second_service_time ); ?></span><?php
+                  ?><span class="ampm"><?php echo date( 'a', $second_service_time ); ?></span><?php
+                endif;
                 if ( $select_date && $service_date ) :
                   ?><div class="date">
                     <span class="day-of-month"><?php echo date( 'd', $service_date ); ?></span>
