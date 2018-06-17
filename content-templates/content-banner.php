@@ -17,13 +17,16 @@
 <section class="top-section">
   <style>
     .home .top-section {
-      height: 630px;
+      height: 680px;
     }
     .home .banner {
       background-image: url('<?php echo $banner_mobile["url"]; ?>');
       background-size: contain;
     }
     @media screen and (min-width: 600px) {
+      .home .top-section {
+        height: 480px;
+      }
       .home .banner {
         background-image: url('<?php echo $banner_tablet["url"]; ?>');
         background-size: contain;
@@ -31,7 +34,7 @@
     }
     @media screen and (min-width: 1024px) {
       .home .top-section {
-        height: 700px;
+        height: 660px;
       }
       .home .banner {
         background-image: url('<?php echo $banner_laptop["url"]; ?>');
@@ -39,6 +42,9 @@
       }
     }
     @media screen and (min-width: 1240px) {
+      .home .top-section {
+        height: 700px;
+      }
       .home .banner {
         background-image: url('<?php echo $banner["url"]; ?>');
       }
