@@ -1,15 +1,44 @@
 <?php
     $use_video = get_field( 'use_video' );
     $banner = get_field( 'banner_image' ); 
+    $banner_tablet = get_field( 'banner_image_tablet' );
+    if ( ! $banner_tablet ) : 
+      $banner_tablet = $banner;
+    endif; 
+    $banner_mobile = get_field( 'banner_image_mobile' );
+    if ( ! $banner_mobile ) : 
+      $banner_mobile = $banner;
+    endif; 
   ?>
 <section class="top-section">
-  <div class="banner"
-    <?php
-      if ( ! $use_video && $banner && array_key_exists( 'url', $banner ) ) :
-          ?> style="background-image: url('<?php echo $banner['url']; ?>');"<?php
-      endif; 
-    ?>
-  ></div>
+  <style>
+    .home .top-section {
+      height: 700px;
+    }
+    .home .banner {
+      background-image: url('<?php echo $banner_mobile["url"]; ?>');
+      background-size: contain;
+    }
+    @media screen and (min-width: 600px) {
+      .home .top-section {
+        height: 700px;
+      }
+      .home .banner {
+        background-image: url('<?php echo $banner_tablet["url"]; ?>');
+        background-size: contain;
+      }
+    }
+    @media screen and (min-width: 1280px) {
+      .home .top-section {
+        height: 700px;
+      }
+      .home .banner {
+        background-image: url('<?php echo $banner["url"]; ?>');
+        background-size: cover;
+      }
+    }
+  </style>
+  <div class="banner"></div>
   <div class="cta">
     <?php
       $banner_heading = get_field( 'banner_heading' );
