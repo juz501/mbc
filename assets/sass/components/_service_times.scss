@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.service-times-heading {
+  margin-bottom: 20px;
+  font-size: 2.2em;
+}
+
 .service-times {
   width: 400px;
   max-width: 100%;
@@ -30,11 +35,6 @@
     &.col-3 {
       width: 1130px;
     }
-  }
-
-  .service-times-heading {
-    margin-bottom: 20px;
-    font-size: 2.2em;
   }
 
   .service-time {

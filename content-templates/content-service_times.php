@@ -1,16 +1,17 @@
 <section>
   <div class="wrap">
-    <div class="service-times-wrap">
+    <?php
+      $services_heading = get_sub_field('services_heading'); 
+      if ( $services_heading ) :
+        ?><h2 class="service-times-heading"><?php echo $services_heading;  ?></h2><?php
+      endif;
+    ?><div class="service-times-wrap">
       <?php
         $services_count = count( get_sub_field('service_time_list'));
       ?>
       <div class="service-times col-<?php echo $services_count; ?>">
         <a class="anchor" id="<?php the_sub_field('services_anchor'); ?>"></a>
         <?php
-          $services_heading = get_sub_field('services_heading'); 
-          if ( $services_heading ) :
-            ?><h2 class="service-times-heading"><?php echo $services_heading;  ?></h2><?php
-          endif;
           if ( have_rows( 'service_time_list' ) ) :
             while ( have_rows( 'service_time_list') ) : 
               the_row();
