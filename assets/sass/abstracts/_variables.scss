@@ -6,14 +6,12 @@ $tablet: 641px;
 
 // White Shade
 
-/*
 $primary-color: #000;
 $primary-light-color: #2c2c2c;
 $primary-dark-color: #000; // for white text
 $secondary-color: #8f8f8f;
 $secondary-light-color: #bfbfbf;
 $secondary-dark-color: #626262;  // for white text
-*/
 
 // Pink Shade
 
@@ -50,12 +48,14 @@ $secondary-dark-color: #c17900;
 
 // Blue Shade
 
+/*
 $primary-color: #00497a; // for white text
 $primary-light-color: #4574a9; // for white text
 $primary-dark-color: #00224e; // for white text
 $secondary-color: #367eaa;
 $secondary-light-color: #6caddc;
 $secondary-dark-color: #00527b;  // for white text
+*/
 
 // Green Shade
 
@@ -88,6 +88,6 @@ $bg-color: $white;
 $base-font: 'Poppins', sans-serif;
 $heading-font: $base-font;
 
-$frontpage-banner-bg: #009aca;
+$frontpage-banner-bg: #000000;
 
 $transition-duration: 250ms;

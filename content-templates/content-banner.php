@@ -17,7 +17,7 @@
 <section class="top-section">
   <style>
     .home .top-section {
-      height: 680px;
+      height: 400px;
     }
     .home .banner {
       background-image: url('<?php echo $banner_mobile["url"]; ?>');
