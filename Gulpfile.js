@@ -57,7 +57,7 @@ gulp.task( 'css:lint', function() {
     .pipe( gulpStylelint({
       reporters: [ {
         formatter: 'string',
-        console: true
+        console:   true
       } ]
     }) );
 });
