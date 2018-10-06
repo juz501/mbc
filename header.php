@@ -1,4 +1,7 @@
 <?php
+/**
+ * Header file used for all templates
+ */
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -31,3 +34,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </header><!-- #masthead -->
       <div class="site-content">
+<?php
