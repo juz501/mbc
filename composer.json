@@ -1,9 +1,6 @@
 {
     "name": "julian/mbc",
     "type": "project",
-    "require": {
-        "chromatix/phpcs-config-chromatix": "^0.0.18"
-    },
     "require-dev": {
         "chromatix/phpcs-config-chromatix": "^0.0.18"
     },
@@ -13,5 +10,8 @@
             "name": "Julian Chan",
             "email": "julianc@gmail.com"
         }
-    ]
+    ],
+    "scripts": {
+      "lint": "php vendor/bin/phpcs --config-set installed_paths ../../chromatix,../../wp-coding-standards/wpcs; php vendor/bin/phpcs --config-set ignore_warnings_on_exit 1;"
+    }
 }
