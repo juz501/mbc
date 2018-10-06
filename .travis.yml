@@ -19,9 +19,13 @@ before_install:
 - export PATH=$(yarn global bin):$PATH
 
 install:
+# Install dependencies from composer.json, preferring dist versions rather than entire git repos.
+- travis_retry composer install --prefer-dist --no-interaction --no-dev
 
 # Install dependencies from package.json.
 - travis_retry yarn install
 
 script:
 - yarn lint
+- composer test
+- yarn test

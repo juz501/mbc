@@ -1,14 +1,12 @@
 'use strict';
 
+var addClassToScroll = require( './addClassToScroll' );
+
 /*Handle some scroll events*/
 jQuery( window ).scroll( function() {
   var scrollTop = jQuery( window ).scrollTop();
-  var absoluteTop = 0;
+  var selector = '#masthead';
+  var scrollclass = 'scroll';
 
-  if ( scrollTop <= absoluteTop ) {
-    jQuery( '#masthead' ).removeClass( 'scroll' );
-  } else {
-    jQuery( '#masthead' ).addClass( 'scroll' );
-  }
-
+  addClassToScroll( selector, scrollclass, scrollTop );
 }).scroll();

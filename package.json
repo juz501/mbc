@@ -8,21 +8,32 @@
   "license": "GPL-3.0",
   "scripts": {
     "build": "gulp",
-    "prod": "gulp",
     "watch": "gulp watch",
-    "lint": "gulp js:lint && gulp css:lint"
+    "lint": "gulp js:lint && gulp css:lint",
+    "test": "jest --verbose --coverage"
   },
   "dependencies": {
     "@chromatix/eslint-config-chromatix": "^0.0.13",
-    "@chromatix/stylelint-config-chromatix": "^0.1.8"
+    "@chromatix/stylelint-config-chromatix": "^0.1.10"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.3",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-eslint": "^4.0.0",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.1",
-    "gulp-stylelint": "^5.0.0"
+    "gulp-stylelint": "^5.0.0",
+    "gulp-uglify": "^3.0.1",
+    "gulplog": "^1.0.0",
+    "jest": "^23.6.0",
+    "jquery": "^3.3.1",
+    "stream-browserify": "^2.0.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
   },
   "main": "index.php"
 }

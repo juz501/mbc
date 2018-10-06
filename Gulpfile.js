@@ -1,11 +1,18 @@
 'use strict';
 
 var gulp = require( 'gulp' );
-var cssnano = require( 'gulp-cssnano' );
+
+var browserify = require( 'browserify' );
+var babelify = require( 'babelify' );
+var source = require( 'vinyl-source-stream' );
+var vbuffer = require( 'vinyl-buffer' );
+var uglify = require( 'gulp-uglify' );
 var sourcemaps = require( 'gulp-sourcemaps' );
+var eslint = require( 'gulp-eslint' );
+
+var cssnano = require( 'gulp-cssnano' );
 var sass = require( 'gulp-sass' );
 var gulpStylelint = require( 'gulp-stylelint' );
-var eslint = require( 'gulp-eslint' );
 
 var supported = [
   'last 2 versions',
@@ -36,8 +43,22 @@ gulp.task( 'sass', [ 'css:lint' ], function() {
 });
 
 gulp.task( 'js', [ 'js:lint' ], function() {
-  return gulp.src( 'assets/js/scripts.js' )
-    .pipe( gulp.dest( 'dist/' ) );
+  var bundler = browserify( './assets/js/scripts.js', { debug: true })
+    .transform( babelify, {
+      presets:    [ '@babel/preset-env' ],
+      sourceMaps: true
+    });
+  return bundler.bundle()
+    .on( 'error', function( err ) {
+      console.error( err );
+      this.emit( 'end' );
+    })
+    .pipe( source( 'scripts.js' ) )
+    .pipe( vbuffer() )
+    .pipe( sourcemaps.init({loadMaps: true}) )
+    .pipe( uglify() )
+    .pipe( sourcemaps.write( './' ) )
+    .pipe( gulp.dest( './dist' ) );
 });
 
 gulp.task( 'watch', function() {
