@@ -9,10 +9,12 @@ add_theme_support( 'title-tag' );
 $assets_path = get_stylesheet_directory() . '/dist';
 $assets_uri = get_stylesheet_directory_uri() . '/dist';
 
-$packagejson_file = get_stylesheet_directory_uri() . '/package.json';
+$packagejson_file = get_stylesheet_directory() . '/package.json';
+// phpcs:disable
 $assets_version = (
-  json_decode( wp_remote_get( $packagejson_file )['body'] )->version
+  json_decode( file_get_contents( $packagejson_file ) )->version
 );
+// phpcs:enable
 add_action( 'wp_enqueue_scripts', 'mbc_enqueue_scripts' );
 
 if ( ! function_exists( 'mbc_enqueue_scripts' ) ) {
