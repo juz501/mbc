@@ -1,0 +1,17 @@
+{
+    "name": "julian/mbc",
+    "type": "project",
+    "require": {
+        "chromatix/phpcs-config-chromatix": "^0.0.18"
+    },
+    "require-dev": {
+        "chromatix/phpcs-config-chromatix": "^0.0.18"
+    },
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Julian Chan",
+            "email": "julianc@gmail.com"
+        }
+    ]
+}
