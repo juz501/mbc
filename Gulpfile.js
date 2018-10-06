@@ -28,6 +28,11 @@ gulp.task( 'default', [
   'js'
 ]);
 
+gulp.task( 'build', [
+  'sass',
+  'js'
+]);
+
 gulp.task( 'sass', [ 'css:lint' ], function() {
   return gulp.src( 'assets/sass/style.scss' )
     .pipe( sourcemaps.init() )
