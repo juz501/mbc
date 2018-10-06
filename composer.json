@@ -14,7 +14,12 @@
         }
     ],
     "scripts": {
-      "post-install-cmd": "php vendor/bin/phpcs --config-set installed_paths ../../chromatix,../../wp-coding-standards/wpcs; php vendor/bin/phpcs --config-set ignore_warnings_on_exit 1;",
+      "post-install-cmd": [
+        "bash -c 'if [[ $OSTYPE == linux* ]]; then php vendor/bin/phpcs --config-set installed_paths ../../chromatix,../../wp-coding-standards/wpcs; php vendor/bin/phpcs --config-set ignore_warnings_on_exit 1; fi'",
+        "bash -c 'if [[ $OSTYPE == darwin* ]]; then php vendor/bin/phpcs --config-set installed_paths ../../chromatix,../../wp-coding-standards/wpcs; php vendor/bin/phpcs --config-set ignore_warnings_on_exit 1; fi'",
+        "bash -c 'if [[ $OSTYPE == msys* ]]; then bash vendor/bin/phpcs --config-set installed_paths ../../chromatix,../../wp-coding-standards/wpcs; bash vendor/bin/phpcs --config-set ignore_warnings_on_exit 1; fi'",
+        "bash -c 'if [[ -z $OSTYPE ]]; then bash vendor/bin/phpcs --config-set installed_paths ../../chromatix,../../wp-coding-standards/wpcs; bash vendor/bin/phpcs --config-set ignore_warnings_on_exit 1; fi'"
+      ],
       "test": "phpunit",
       "lint": "php vendor/bin/phpcs ./*.php ./content-templates/*.php"
     }
