@@ -8,7 +8,9 @@
   "license": "GPL-3.0",
   "scripts": {
     "build": "gulp",
-    "watch": "gulp watch"
+    "prod": "gulp",
+    "watch": "gulp watch",
+    "lint": "gulp js:lint && gulp css:lint"
   },
   "dependencies": {
     "@chromatix/eslint-config-chromatix": "^0.0.13",

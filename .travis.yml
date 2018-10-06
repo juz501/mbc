@@ -1,0 +1,27 @@
+language: php
+
+sudo: false
+
+branches:
+  except:
+  - /^v[0-9]+\.[0-9]+\.[0-9]+/
+
+php:
+- 7.1
+
+git:
+  depth: 1
+
+before_install:
+# Ensure correct/latest LTS version of Node is used
+- nvm install --lts
+- node --version
+- export PATH=$(yarn global bin):$PATH
+
+install:
+
+# Install dependencies from package.json.
+- travis_retry yarn install
+
+script:
+- yarn lint
