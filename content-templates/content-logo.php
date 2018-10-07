@@ -17,7 +17,9 @@
     <?php else : ?>
       <span class="logo-span">
     <?php endif; ?>
-    mooroolbark <strong>baptist</strong> church&nbsp;
+    mooroolbark
+    <strong>baptist</strong>
+    church&nbsp;
     <?php if ( is_front_page() ) : ?>
       </h1>
     <?php else : ?>
